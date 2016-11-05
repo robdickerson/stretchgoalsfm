@@ -1,0 +1,398 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables";
+@import "mixins";
+
+
+//
+// Buttons
+// --------------------------------------------------
+
+// Common styles
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+
+  // Reset the shadow
+
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include box-shadow(none);
+  }
+
+  .badge {
+    text-shadow: none;
+  }
+}
+
+// Mixin for generating new styles
+@mixin btn-styles($btn-color: #555) {
+  background-repeat: repeat-x;
+
+  &:hover,
+  &:focus  {
+    background-color: lighten($btn-color, 9%);
+    background-position: 0 -15px;
+  }
+
+  &:active,
+  &.active {
+    background-color: lighten($btn-color, 9%);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: darken($btn-color, 12%);
+      background-image: none;
+    }
+  }
+}
+
+// Common styles
+.btn {
+  // Remove the gradient for the pressed/active state
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+	
+  &:active,
+  &.active {
+    background-image: none;
+  }
+}
+
+
+// Apply the mixin to the buttons
+.btn-default { 
+	@include btn-styles($btn-default-bg); 
+}
+.btn-primary { 
+	@include btn-styles($btn-primary-bg); 
+	
+	&.btn-invert {
+		background-color: transparent !important;
+		color: $btn-primary-bg !important;
+		
+		&:hover,
+		&:active {
+			background-color: $btn-primary-bg !important;
+			color: $btn-primary-color !important;
+		}
+	}
+}
+.btn-success { 
+	@include btn-styles($btn-success-bg); 
+	
+	&.btn-invert {
+		background-color: transparent !important;
+		color: $btn-success-bg !important;
+		
+		&:hover,
+		&:active {
+			background-color: $btn-success-bg !important;
+			color: $btn-success-color !important;
+		}
+	}
+}
+.btn-info    { 
+	@include btn-styles($btn-info-bg); 
+	
+	&.btn-invert {
+		background-color: transparent !important;
+		color: $btn-info-bg !important;
+		
+		&:hover,
+		&:active {
+			background-color: $btn-info-bg !important;
+			color: $btn-info-color !important;
+		}
+	}
+}
+.btn-warning { 
+	@include btn-styles($btn-warning-bg); 
+	
+	&.btn-invert {
+		background-color: transparent !important;
+		color: $btn-warning-bg !important;
+		
+		&:hover,
+		&:active {
+			background-color: $btn-warning-bg !important;
+			color: $btn-warning-color !important;
+		}
+	}
+}
+.btn-danger  { 
+	@include btn-styles($btn-danger-bg); 
+	
+	&.btn-invert {
+		background-color: transparent !important;
+		color: $btn-danger-bg !important;
+		
+		&:hover,
+		&:active {
+			background-color: $btn-danger-bg !important;
+			color: $btn-danger-color !important;
+		}
+	}
+}
+
+
+//
+// Images
+// --------------------------------------------------
+
+.thumbnail,
+.img-thumbnail {
+  @include box-shadow(0 1px 2px rgba(0,0,0,.075));
+}
+
+
+//
+// Dropdowns
+// --------------------------------------------------
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  @include gradient-vertical($start-color: $dropdown-link-hover-bg, $end-color: darken($dropdown-link-hover-bg, 5%));
+  background-color: darken($dropdown-link-hover-bg, 5%);
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  @include gradient-vertical($start-color: $dropdown-link-active-bg, $end-color: darken($dropdown-link-active-bg, 5%));
+  background-color: darken($dropdown-link-active-bg, 5%);
+}
+
+
+//
+// Navbar
+// --------------------------------------------------
+
+// Default navbar
+.navbar-default {
+	border-radius: 0;
+	border: 0;
+	background-color: transparent !important;
+	font-size: 13px;
+	line-height: 13px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	
+	.navbar-toggle {
+    	border: 0 !important;
+		margin-right: 0;
+	}
+	
+	.navbar-nav li {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 12px;
+		margin-right: 12px;
+		
+		&:hover,
+		&:active {
+			border-bottom: 2px solid $brand-primary;
+		}
+		
+		&.action {
+			border-bottom: 0 !important;
+			
+			&:hover,
+			&:active {
+				border-bottom: 0 !important;
+				background-color: transparent !important;
+			}
+		}
+	}
+
+	.navbar-nav > .open > a,
+	.navbar-nav > .active > a {
+		color: #fff;
+		background-color: transparent;
+		
+		&:hover,
+		&:active {
+			color: $white !important;
+			background-color: transparent;
+		}
+	}
+	
+	.navbar-nav > .open,
+	.navbar-nav > .active {
+		border-bottom: 2px solid $brand-primary;
+		
+		&:hover,
+		&:active {
+			border-bottom: 2px solid $brand-primary;
+		}
+	}
+	
+	.btn {
+		padding: 5px 15px;
+		font-size: 13px;
+		margin-left: 15px;
+		
+		&:hover,
+		&:active {
+			color: $white !important;
+			background-color: rgba(255,255,255,.25) !important;
+			border-color: $white;
+		}
+	}
+}
+
+
+.navbar-nav > li > a {
+	color: #fff !important;
+	font-weight: 300 !important;
+	padding-top: 6px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	
+	&:hover,
+	&:active {
+		color: $white !important;
+		background-color: transparent;
+	}
+	
+}
+
+.navbar-brand {
+	padding: 0 0 0 15px !important;
+
+	&:hover,
+	&:active {
+		border: 0;
+	}
+}
+
+
+// Fix active state of dropdown items in collapsed mode
+@media (max-width: $grid-float-breakpoint-max) {
+	.navbar .navbar-nav .open .dropdown-menu > .active > a {
+		&,
+		&:hover,
+		&:focus {
+			color: #fff;
+			border: 0 !important;
+		}
+	}
+	
+	.navbar-brand {
+		padding: 7px 0 0 5px !important;
+	}
+	
+	.navbar-nav li {
+		border-bottom: 0 !important;
+		margin: 0 !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		
+		&:hover,
+		&:active {
+			border-bottom: 0 !important;
+			background-color: $gray-darker;
+		}
+		
+		.btn {
+			width: 100%;
+			display: block;
+			margin-left: 0 !important;
+		}
+	}
+}
+
+//
+// Alerts
+// --------------------------------------------------
+
+// Common styles
+.alert {
+  //text-shadow: 0 1px 0 rgba(255,255,255,.2);
+  //$shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
+  //@include box-shadow($shadow);
+}
+
+// Mixin for generating new styles
+@mixin alert-styles($color) {
+  background-color: $color;
+  border-color: darken($color, 15%);
+}
+
+// Apply the mixin to the alerts
+.alert-success    { @include alert-styles($alert-success-bg); }
+.alert-info       { @include alert-styles($alert-info-bg); }
+.alert-warning    { @include alert-styles($alert-warning-bg); }
+.alert-danger     { @include alert-styles($alert-danger-bg); }
+
+
+//
+// List groups
+// --------------------------------------------------
+
+.list-group {
+  border-radius: $border-radius-base;
+  @include box-shadow(0 1px 2px rgba(0,0,0,.075));
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  text-shadow: 0 -1px 0 darken($list-group-active-bg, 10%);
+  @include gradient-vertical($start-color: $list-group-active-bg, $end-color: darken($list-group-active-bg, 7.5%));
+  border-color: darken($list-group-active-border, 7.5%);
+
+  .badge {
+    text-shadow: none;
+  }
+}
+
+
+//
+// Panels
+// --------------------------------------------------
+
+// Common styles
+.panel {
+  @include box-shadow(0 1px 2px rgba(0,0,0,.05));
+}
+
+// Mixin for generating new styles
+@mixin panel-heading-styles($color) {
+  @include gradient-vertical($start-color: $color, $end-color: darken($color, 5%));
+}
+
+// Apply the mixin to the panel headings only
+.panel-default > .panel-heading   { @include panel-heading-styles($panel-default-heading-bg); }
+.panel-primary > .panel-heading   { @include panel-heading-styles($panel-primary-heading-bg); }
+.panel-success > .panel-heading   { @include panel-heading-styles($panel-success-heading-bg); }
+.panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
+.panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
+.panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
+
+

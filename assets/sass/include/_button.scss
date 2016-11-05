@@ -1,0 +1,334 @@
+a.play-button {
+	cursor: pointer;
+
+	em.fa {
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+		cursor: pointer;
+		background-color: transparent;
+		outline: none;
+		text-align: center;
+		display: inline-block;
+	}
+
+	em.fa-play {
+		line-height: 59px;
+		width: 68px;
+		height: 68px;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		border: 4px white solid;
+		font-size: 30px;
+		padding-left: 7px;
+		color: #fff;
+
+		&:hover,
+		&:active {
+			cursor: pointer;
+			background-color: $white;
+			color: $gray-dark;
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	
+	&.settings {
+		width: 48px;
+		height: 48px;
+		text-indent: -9999px;
+		-webkit-transition: background 400ms ease;
+		-moz-transition: background 400ms ease;
+		-ms-transition: background 400ms ease;
+		-o-transition: background 400ms ease;
+		transition: background 400ms ease;
+		
+		&:before {
+			content: "";
+			background-color: $gray-lighter;
+			border-radius: 100%;
+			border: 3px solid $body-bg;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 48px;
+			width: 48px;
+		}
+		
+		&:after,
+		&:before {
+			-webkit-transition: background 400ms ease;
+			-moz-transition: background 400ms ease;
+			-ms-transition: background 400ms ease;
+			-o-transition: background 400ms ease;
+			transition: background 400ms ease;
+    		-webkit-transition-delay: 0;
+    		transition-delay: 0;
+		}
+		
+		&:after {
+			content: "";
+			background: url(../images/icons/sprites.png) no-repeat -17px 0;
+			display: block;
+			width: 27px;
+			height: 27px;
+			overflow: visible;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -13px 0 0 -13px;
+		}
+		
+		&:hover,
+		&:active {
+			cursor: pointer;
+			
+			&:before {
+				background-color: $gray-light;
+			}
+		}
+	}
+	
+	&.launch-app {
+		width: 86px;
+		height: 86px;
+		text-indent: -9999px;
+		-webkit-transition: background 400ms ease;
+		-moz-transition: background 400ms ease;
+		-ms-transition: background 400ms ease;
+		-o-transition: background 400ms ease;
+		transition: background 400ms ease;
+		
+		&:before {
+			content: "";
+			background-color: $brand-primary;
+			border-radius: 100%;
+			border: 3px solid $body-bg;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 86px;
+			width: 86px;
+		}
+		
+		&:after,
+		&:before {
+			-webkit-transition: background 400ms ease;
+			-moz-transition: background 400ms ease;
+			-ms-transition: background 400ms ease;
+			-o-transition: background 400ms ease;
+			transition: background 400ms ease;
+    		-webkit-transition-delay: 0;
+    		transition-delay: 0;
+		}
+		
+		&:after {
+			content: "";
+			background: url(../images/icons/sprites.png) no-repeat -45px 0;
+			display: block;
+			width: 45px;
+			height: 44px;
+			overflow: visible;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -21px 0 0 -25px;
+		}
+		
+		&:hover,
+		&:active {
+			cursor: pointer;
+			
+			&:before {
+				background-color: #37aea4;
+			}
+		}
+	}
+		
+	&.add {
+		width: 64px;
+		height: 64px;
+		text-indent: -9999px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1001;
+		margin: -32px 0 0 -32px;
+		-webkit-transition: background 400ms ease;
+		-moz-transition: background 400ms ease;
+		-ms-transition: background 400ms ease;
+		-o-transition: background 400ms ease;
+		transition: background 400ms ease;
+		
+		&:before {
+			content: "";
+			background-color: $gray-lighter;
+			border-radius: 100%;
+			-webkit-box-shadow: 6px 6px 10px 0 rgba(0,0,0,.1);
+			box-shadow: 3px 3px 10px 0 rgba(0,0,0,.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 64px;
+			width: 64px;
+		}
+		
+		&:after,
+		&:before {
+			-webkit-transition: background 400ms ease;
+			-moz-transition: background 400ms ease;
+			-ms-transition: background 400ms ease;
+			-o-transition: background 400ms ease;
+			transition: background 400ms ease;
+    		-webkit-transition-delay: 0;
+    		transition-delay: 0;
+		}
+		
+		&:after {
+			content: "";
+			background: url(../images/icons/sprites.png) no-repeat 0 0;
+			display: block;
+			width: 16px;
+			height: 16px;
+			overflow: visible;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -8px 0 0 -8px;
+		}
+		
+		&:hover,
+		&:active {
+			&:before {
+				background-color: $gray-light;
+			}
+		}
+	}
+}
+
+@media not all, (-webkit-min-device-pixel-ratio: 1.5), not all, (min-resolution: 1.5dppx) {
+	.button {
+		&.settings {
+			&:after {
+				background: url(../images/icons/sprites-2x.png) no-repeat -17px 0;
+				background-size: 270px 190px;
+			}
+		}
+		
+		&.launch-app {
+			&:after {
+				background: url(../images/icons/sprites-2x.png) no-repeat -45px 0;
+				background-size: 270px 190px;
+			}
+		}
+		
+		&.add {
+			&:after {
+				background: url(../images/icons/sprites-2x.png) no-repeat 0 0;
+				background-size: 270px 190px;
+			}
+		}
+	}
+}
+
+.trans-button {
+	border: 1px;
+	border-style: solid;
+	font-weight: 300;
+	display: inline-block;
+	text-align: center;
+	outline: 0;
+	
+	@include btn-size(0px, 0px, 18px, 48px, 200px, 48px);
+	
+    cursor: pointer !important;
+	text-transform: uppercase;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+	
+	&:hover,
+	&:active {
+		outline: 0;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	&.trans-white {
+		border-color: $white;
+		color: $white !important;
+		text-decoration: none;
+		cursor: pointer;
+		
+		&:hover,
+		&:active {
+			background-color: rgba(0,0,0,.15);
+			text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+		}
+	}
+	
+	&.trans-orange {
+		border-color: $brand-primary;
+		color: $brand-primary !important;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: $white;
+		
+		&:hover,
+		&:active {
+			background-color: $brand-primary;
+			color: $white !important;
+		}
+	}
+	
+	&.trans-black {
+		border-color: $gray-light;
+		color: $gray-dark !important;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: transparent;
+		
+		&:hover,
+		&:active {
+			background-color: rgba(255,255,255,.35);
+		}
+	}
+	
+	&.trans-blue {
+		border-color: #315262;
+		color: #315262 !important;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: transparent;
+		
+		&:hover,
+		&:active {
+			background-color: rgba(255,255,255,.35);
+		}
+	}
+	
+	&.trans-lg {
+		@include btn-size(0, 60px, 30px, 64px, auto, 64px);
+	}
+
+	&.trans-sm {
+		@include btn-size(0, 15px, 14px, 36px, auto, 36px);
+	}
+
+	&.trans-xs {
+		@include btn-size(0, 8px, 10px, 24px, auto, 24px);
+	}
+	
+	&.trans-block {
+		@include btn-size(0, 20px, 30px, 74px, 100%, 74px);
+	}
+}
