@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Stretch Goals Podcast"
-episode: 3
+title:  Stretch Goals Podcast
+episode: 5
+subtitle: subtitle
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
 date:   2016-11-05 14:23:18 -0400
 image: headshot-3.jpg

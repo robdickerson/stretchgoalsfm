@@ -2,8 +2,11 @@
 layout: post
 title:  "Managing Your Time"
 episode: 7
+subtitle: subtitle
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
 date:   2016-11-05 14:23:18 -0400
 image: giants.jpg
+length: 27243467
 categories: podcast
 ---
+

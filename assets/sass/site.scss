@@ -168,51 +168,14 @@ div.page-home {
 	}
 }
 
-div.page-business {
-	div#hero {
-		background-image: url(../images/heros/solutions-business.jpg);
-		height: 100vh;
-	}
-}
-
-div.page-educators {
-	div#hero {
-		background-image: url(../images/heros/solutions-educators.jpg);
-		height: 100vh;
-	}
-}
-
-
-div.page-experts {
-	div#hero {
-		background-image: url(../images/heros/solutions-experts.jpg);
-		height: 100vh;
-	}
-}
-
-div.page-about {
-	div#hero {
-		background-image: url(../images/heros/about.jpg);
-		height: 100vh;
-	}
-}
-
-div.page-blog {
-	div#hero {
-		background-image: url(../images/heros/blog-connect.jpg);
-	}
-}
-
 div.page-podcasts {
 	div#hero {
-		background-image: url(../images/heros/podcasts.jpg);
-		height: 100vh;
+		height: 50vh;
 	}
 }
 
 div.page-podcasts-detail {
 	div#hero {
-		background-image: url(../images/heros/podcasts.jpg);
 		height: 50vh;
 	}
 }
@@ -291,41 +254,11 @@ div#hero {
 			display: table-cell;
 			text-align: center;
 			color: $white;
-			
-			div.profile-pic {
-				position: absolute;
-				bottom: -90px;
-				left: 50%;
-				margin-left: -170px;
-				
-				img {
-					clip-path: circle(115px at center);
-					-webkit-clip-path: circle(115px at center);
-					height: 230px;
-					width: auto;
-				}
-			}
-			
+
 			div.podcasts-left {
 				display: inline-block;
 				width: auto;
 				text-align: right;
-				
-				div.profile-pic {
-					position: relative !important;
-					bottom: auto;
-					left: 0;
-					margin-left: 0;
-					top: -50px;
-					
-					img {
-						clip-path: circle(90px at center);
-						-webkit-clip-path: circle(90px at center);
-						height: 180px !important;
-						width: auto !important;
-						float: right;
-					}
-				}
 			}
 			
 			div.podcasts-right {
@@ -1759,7 +1692,7 @@ div#podcasts {
 	}
 	
 	span.podcast-post {
-		margin-top: 65px;
+		/*margin-top: 65px;*/
 		margin-bottom: 25px;
 		display: block;
 		

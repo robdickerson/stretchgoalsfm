@@ -52,4 +52,7 @@ $(document).ready(function(){
 		var toggle = toggles[i];
 		toggleHandler(toggle);
 	}
+
+
+
 })();

@@ -25,29 +25,29 @@
 
         <style>
             .page-podcasts-detail #hero {
-                background-image: url(../assets/images/podcasts/{{ page.image }}) !important;
+                background-image:
+                    linear-gradient(
+                        rgba(0,0,0,.45),
+                        rgba(0,0,0,.45)),
+                    url(../assets/images/podcasts/{{ page.image }});
              }
         </style>
 
     </head>
     <body>
-    <div class="wrapper page-podcasts-post">
+    <div class="wrapper page-podcasts-detail">
 
         {% include header.html %}
 
         <div id="hero" class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                    <div class="hero-body">
-                        <div class="hero-head">
-                            <h1><a href="podcasts-detail.php">{{ page.title}}</a></h1>
-                            <div>
-                                <p>Episode {{ page.episode }}</p>
-                            </div>
-                        </div>
+            <div class="hero-body">
+                <div class="hero-head">
+                    <h1><a href="podcasts-detail.php">{{ page.title}}</a></h1>
+                    <div>
+                        <p>Episode {{ page.episode }}</p>
                     </div>
                 </div>
-            </div><!--/ .row -->
+            </div>
         </div><!--/ #hero -->
 
         {{ content }}
@@ -56,6 +56,24 @@
         {% include footer.html %}
 
     </div><!--/ .wrapper -->
+
+    <!-- Delayed Load Scripts -->
+    <script type="text/javascript" src="https://content.jwplatform.com/libraries/wdpJU5qQ.js"></script>
+    <script>jwplayer.key="UAkj/feTr5iWaafrDvaNL1m7D63CSfLBGXSKQmkPVOw=";</script>
+
+    <script>
+        var playerInstance = jwplayer("player");
+
+        playerInstance.setup({
+            file: "http://audio.stretchgoals.fm/ep{{ page.episode}}.mp3",
+            width: "auto",
+            height: "32",
+            stretching: "fill",
+            displaytitle: false,
+            controls: true,
+            skin: "bekle"
+        });
+    </script>
 
     {% include footerscripts.html %}
 
