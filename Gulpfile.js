@@ -31,6 +31,13 @@ gulp.task('styles', ['clean'], function () {
 
 });
 
+gulp.task('bootstrap', function() {
+
+    return gulp.src('assets/components/bootstrap/sass/*.scss')
+        .pipe(plugins.sass().on('error', plugins.sass.logError))
+        .pipe(gulp.dest('assets/components/bootstrap/css'))
+});
+
 // // Clean the build directories
 gulp.task('clean', function () {
 
@@ -49,5 +56,6 @@ gulp.task('clean', function () {
 
 gulp.task('default', [], function () {
     gulp.watch('assets/**/*.scss', ['styles']);
+    gulp.watch('assets/components/bootstrap/sass/**/*.scss', ['bootstrap']);
 });
 
