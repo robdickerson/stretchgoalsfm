@@ -22,11 +22,16 @@
         <script src="/assets/components/bootstrap/javascripts/bootstrap.min.js"></script>
         <script src="/assets/components/modernizr/modernizr.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-        <script src="/assets/js/contact.js"></script>
+
+        <style>
+            .page-podcasts-detail #hero {
+                background-image: url(../assets/images/podcasts/{{ page.image }}) !important;
+             }
+        </style>
 
     </head>
     <body>
-    <div class="wrapper page-podcasts">
+    <div class="wrapper page-podcasts-post">
 
         {% include header.html %}
 

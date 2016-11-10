@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Ready to Start Your Business?"
+episode: 2
+description: Why do you want to start a company?
+date:   2016-10-05 12:00:00 -0400
+image: headshot-2.jpg
+categories: podcast
+---

@@ -824,12 +824,12 @@ div#header {
     height: 55px; }
     div#header div.banner span.logo {
       display: block;
-      width: 169px;
-      height: 36px;
+      width: 180px;
+      height: 28px;
       overflow: hidden;
       text-indent: -9999px;
-      background: url(../images/sprites.png) no-repeat -81px 0;
-      background-size: 500px 300px;
+      background: url(../images/logo-horizontal-white-red.png) no-repeat;
+      /*background-size: 500px 300px;*/
       margin-top: 10px;
       z-index: 99999;
       position: relative; }
@@ -869,6 +869,10 @@ div.page-blog div#hero {
 div.page-podcasts div#hero {
   background-image: url(../images/heros/podcasts.jpg);
   height: 100vh; }
+
+div.page-podcasts-detail div#hero {
+  background-image: url(../images/heros/podcasts.jpg);
+  height: 50vh; }
 
 div.page-contact div#hero {
   background-image: url(../images/heros/contact.jpg); }
@@ -2310,12 +2314,12 @@ div#footer {
       text-decoration: none; }
   div#footer div.footer-logo span.logo {
     display: block;
-    width: 211px;
+    width: 285px;
     height: 45px;
     overflow: hidden;
     text-indent: -9999px;
-    background: url(../images/sprites.png) no-repeat -81px -36px;
-    background-size: 500px 300px;
+    background: url(../images/logo-horizontal-white.png) no-repeat;
+    /*background-size: 500px 300px;*/
     margin: 0 auto 20px auto;
     z-index: 99999;
     position: relative; }

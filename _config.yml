@@ -33,3 +33,12 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+#sass:
+#  sass_dir: _sass
+#  style: compressed
+
+exclude:
+  - node_modules
+  - Gulpfile.js
+  - package.json

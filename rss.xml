@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <channel>
+        <atom:link href="http://stretchgoals.fm/rss" rel="self" type="application/rss+xml"/>
+        <title>Stretch Goals Podcast</title>
+        <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+        <lastBuildDate>Sat, 05 Nov 2016 04:36:15 +0000</lastBuildDate>
+        <generator>Libsyn WebEngine 2.0</generator>
+        <link>http://stretchgoals.fm</link>
+        <language>en</language>
+        <copyright><![CDATA[]]></copyright>
+        <docs>http://stretchgoals.fm</docs>
+        <itunes:summary><![CDATA[]]></itunes:summary>
+        <image>
+            <url>http://static.libsyn.com/p/assets/c/e/c/7/cec74f5a804d1212/soapy.png</url>
+            <title>Stretch Goals Podcast</title>
+            <link><![CDATA[http://stretchgoals.libsyn.com/podcast]]></link>
+        </image>
+        <itunes:author></itunes:author>
+        <itunes:image href="http://static.libsyn.com/p/assets/c/e/c/7/cec74f5a804d1212/soapy.png" />
+        <itunes:explicit>no</itunes:explicit>
+        <description><![CDATA[This is the Stretch Goals podcast with your hosts Robert Dickerson and Scott Davis.  Each week we’ll share insights and lessons learned based on our experiences as Entrepreneurs. We’ll challenge you to create ambitious goals as you start and grow your business.]]></description>
+        <itunes:subtitle><![CDATA[]]></itunes:subtitle>
+    </channel>
+</rss>
