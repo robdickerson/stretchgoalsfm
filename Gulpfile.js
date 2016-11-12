@@ -1,5 +1,6 @@
 var child = require('child_process');
 var browserSync = require('browser-sync').create();
+var fs = require('fs');
 
 const siteRoot = '_site';
 
@@ -91,17 +92,17 @@ gulp.task('serve', function() {
     gulp.watch('assets/components/bootstrap/sass/**/*.scss', ['bootstrap']);
 });
 
-// aws = JSON.parse(fs.readFileSync('./aws.json')); // reading aws config file
-// var publisher = plugins.awspublish.create(aws);
+var aws = JSON.parse(fs.readFileSync('aws.json'));
+var publisher = plugins.awspublish.create(aws);
 
-gulp.task('deploy', ['styles'], function () {
+gulp.task('deploy', ['styles', 'jekyll'], function () {
 
     var headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
 
     return gulp.src(siteRoot+'/**')
         .pipe(publisher.publish(headers))
         .pipe(publisher.sync())
-        .pipe(awspublish.reporter());
+        .pipe(plugins.awspublish.reporter());
 
 });
 
