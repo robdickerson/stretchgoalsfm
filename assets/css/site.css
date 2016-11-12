@@ -841,8 +841,7 @@ div#header {
 
 @media not all, (-webkit-min-device-pixel-ratio: 1.5), not all, (min-resolution: 1.5dppx) {
   div#header div.banner span.logo {
-    background: url(../images/sprites-2x.png) no-repeat -81px 0;
-    background-size: 500px 300px; } }
+    background: url(../images/logo-horizontal-white-red.png) no-repeat; } }
 
 div.page-home div#hero {
   height: 100vh; }
@@ -913,7 +912,7 @@ div#hero {
         max-width: 600px; }
       div#hero div.hero-body div.hero-head h1 {
         font-size: 72px;
-        font-weight: 100;
+        font-weight: 500;
         max-width: 900px;
         width: auto;
         margin: 0 auto 25px auto; }
@@ -2291,7 +2290,6 @@ div#footer {
 
 @media not all, (-webkit-min-device-pixel-ratio: 1.5), not all, (min-resolution: 1.5dppx) {
   div#footer div.footer-logo span.logo {
-    background-image: url(../images/sprites-2x.png);
-    background-size: 500px 300px; } }
+    background: url(../images/logo-horizontal-white.png) no-repeat; } }
 
 /*# sourceMappingURL=site.css.map */

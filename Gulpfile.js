@@ -1,3 +1,8 @@
+var child = require('child_process');
+var browserSync = require('browser-sync').create();
+
+const siteRoot = '_site';
+
 //Init variables
 var gulp = require('gulp'),
 
@@ -53,9 +58,52 @@ gulp.task('clean', function () {
 
 });
 
+gulp.task('jekyll', function () {
 
-gulp.task('default', [], function () {
+    var jekyll_process = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+
+    const jekyll = child.spawn(jekyll_process, ['build',
+        '--watch',
+        '--incremental',
+        '--drafts'
+    ]);
+
+    const jekyllLogger = function(buffer) {
+        buffer.toString()
+            .split(/\n/)
+            .forEach(function(message) { plugins.util.log('Jekyll: ' + message)});
+    };
+
+    jekyll.stdout.on('data', jekyllLogger);
+    jekyll.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('serve', function() {
+    browserSync.init({
+        files: [siteRoot + '/**', '!'+siteRoot + 'feed.xml','!'+siteRoot + 'feed.xslt.xml'],
+        port: 4000,
+        server: {
+            baseDir: siteRoot
+        }
+    });
+
     gulp.watch('assets/**/*.scss', ['styles']);
     gulp.watch('assets/components/bootstrap/sass/**/*.scss', ['bootstrap']);
 });
+
+// aws = JSON.parse(fs.readFileSync('./aws.json')); // reading aws config file
+// var publisher = plugins.awspublish.create(aws);
+
+gulp.task('deploy', ['styles'], function () {
+
+    var headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
+
+    return gulp.src(siteRoot+'/**')
+        .pipe(publisher.publish(headers))
+        .pipe(publisher.sync())
+        .pipe(awspublish.reporter());
+
+});
+
+gulp.task('default', ['styles','jekyll','serve']);
 

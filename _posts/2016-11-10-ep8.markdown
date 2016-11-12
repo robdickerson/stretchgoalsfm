@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Building and Growing Your Team"
-episode: 4
+title:  "Getting Paid"
+episode: 7
 subtitle: subtitle
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
-date:   2016-11-05 14:23:18 -0400
-image: buildingteam.jpg
+date:   2016-11-10 14:23:18 -0400
+image: gettingpaid.jpg
 length: 27243467
 categories: podcast
 ---

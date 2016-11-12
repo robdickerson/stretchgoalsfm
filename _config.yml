@@ -42,7 +42,8 @@ permalink: /:title/
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-feed
+#  - jekyll-feed
+
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -153,8 +153,7 @@ div#header {
 	div#header {
 		div.banner {
 			span.logo {
-				background: url(../images/sprites-2x.png) no-repeat -81px 0;
-				background-size: 500px 300px;
+				background: url(../images/logo-horizontal-white-red.png) no-repeat;
 			}
 		}
 	}
@@ -269,7 +268,7 @@ div#hero {
 			
 			h1 {
 				font-size: 72px;
-				font-weight: 100;
+				font-weight: 500;
 				max-width: 900px;
 				width: auto;
 				margin: 0 auto 25px auto;
@@ -313,7 +312,7 @@ div#hero {
 	div#hero {
 		height: 100vh;
 		min-height: 400px;
-		
+
 		div.hero-overlay {
 			height: 100vh;
 		}
@@ -2290,8 +2289,7 @@ div#footer {
 	div#footer {
 		div.footer-logo {
 			span.logo {
-				background-image: url(../images/sprites-2x.png);
-		background-size: 500px 300px;
+				background: url(../images/logo-horizontal-white.png) no-repeat;
 			}
 		}
 	}
