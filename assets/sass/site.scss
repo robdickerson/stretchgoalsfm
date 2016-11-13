@@ -2223,6 +2223,27 @@ div#newsletter {
 	}
 }
 
+div#hosts-wrapper {
+	background-color: #ECF0F1;
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+
+div#hosts {
+	text-align: center;
+	color: $black;
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+}
+
 div#footer-wrapper {
 	background-color: #2C3E50;
 	padding-top: 60px;

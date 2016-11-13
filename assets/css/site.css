@@ -110,12 +110,12 @@ span.sprite-icon {
     background-position: -372px 0; }
   span.sprite-icon.twitter {
     width: 18px;
-    height: 17px;
-    background-position: -383px 0; }
+    height: 15px;
+    background-position: -383px -3px; }
   span.sprite-icon.twitter-blue {
     width: 18px;
-    height: 17px;
-    background-position: -383px -20px; }
+    height: 15px;
+    background-position: -383px -23px; }
   span.sprite-icon.linkedin {
     width: 18px;
     height: 18px;
@@ -2244,6 +2244,20 @@ div#newsletter {
     border: 0;
     margin: 5px 7px;
     background-color: #e74c3c; }
+
+div#hosts-wrapper {
+  background-color: #ECF0F1;
+  padding-top: 40px;
+  padding-bottom: 60px; }
+
+div#hosts {
+  text-align: center;
+  color: #000; }
+  div#hosts h1 {
+    font-size: 36px; }
+  div#hosts h3 {
+    font-size: 24px;
+    line-height: 36px; }
 
 div#footer-wrapper {
   background-color: #2C3E50;

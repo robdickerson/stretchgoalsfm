@@ -2,19 +2,11 @@
     <div id="footer" class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-9 footer-nav">
-                <!--ul>
-                    <li><strong>Latest Episodes</strong></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Educators</a></li>
-                    <li><a href="#">Educators</a></li>
-                    <li><a href="#">Educators</a></li>
-                    <li><a href="#">Educators</a></li>
-                </ul-->
                 <ul>
                     <li><strong>Subscribe</strong></li>
-                    <li><a href="#">iTunes</a></li>
-                    <li><a href="#">Google Play</a></li>
-                    <li><a href="#">RSS Feed</a></li>
+                    <li><a href="{{ site.itunes_subscribe }}">iTunes</a></li>
+                    <li><a href="{{ site.googleplay_subscribe }}">Google Play</a></li>
+                    <li><a href="{{ site.rss_subscribe }}">RSS Feed</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 footer-logo">
@@ -24,8 +16,8 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 social-links">
 
-                <a href="https://www.twitter.com/stretchgoalsfm" target="_blank"><span class="sprite-icon twitter">Twitter</span></a>
-                <a href="https://www.youtube.com/channel/UC9bgL2WxNcwux_6gENaf5Fw" target="_blank"><span class="sprite-icon youtube">YouTube</span></a>
+                <a href="https://www.twitter.com/{{ site.twitter_username }}" target="_blank"><span class="sprite-icon twitter">Twitter</span></a>
+                <a href="{{ site.youtube_channel }}" target="_blank"><span class="sprite-icon youtube">YouTube</span></a>
                 <!--<a href="https://www.linkedin.com/company/mapout-llc" target="_blank"><span class="sprite-icon linkedin">LinkedIn</span></a>-->
 <!--                <a href="https://www.facebook.com/mapoutio" target="_blank"><span class="sprite-icon facebook">Facebook</span></a>-->
 				<!--<a href="https://plus.google.com/+mapoutlearning/posts" target="_blank"><span class="sprite-icon google">Google+</span></a>-->

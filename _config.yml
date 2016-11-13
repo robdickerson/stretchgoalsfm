@@ -31,11 +31,17 @@ squareLogo:
 
 # Social media
 twitter_username: stretchgoalsfm
+youtube_channel: https://www.youtube.com/channel/UC9bgL2WxNcwux_6gENaf5Fw
+
+rob_twitter_username: RobDickersonJr
+rob_twitter_url: https://twitter.com/robdickersonjr
+scott_twitter_username: The_Scott_Davis
+scott_twitter_url: https://twitter.com/the_scott_davis
 
 # Subscription links
 itunes_subscribe: https://itunes
 googleplay_subscribe: https://play.google.com
-rss_subscribe: http://stretchgoals.fm/rss
+rss_subscribe: http://stretchgoals.fm/rss.xml
 
 permalink: /:title/
 
