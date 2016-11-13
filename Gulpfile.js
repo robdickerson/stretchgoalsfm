@@ -65,8 +65,8 @@ gulp.task('jekyll', function () {
 
     const jekyll = child.spawn(jekyll_process, ['build',
         '--watch',
-        '--incremental',
-        '--drafts'
+        '--incremental' /*,
+        '--drafts'*/
     ]);
 
     const jekyllLogger = function(buffer) {
