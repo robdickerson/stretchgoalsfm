@@ -97,7 +97,7 @@ var publisher = plugins.awspublish.create(aws);
 
 gulp.task('deploy', ['styles', 'jekyll'], function () {
 
-    var headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
+    var headers = { 'Cache-Control': 'max-age=3600, no-transform, public' };
 
     return gulp.src(siteRoot+'/**')
         .pipe(publisher.publish(headers))

@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
-.idea
+.idea/
+*.iml
 node_modules
 aws.json
