@@ -22,11 +22,11 @@ url: "http://stretchgoals.fm" # the base hostname & protocol for your site, e.g.
 
 
 #Feed Info/iTunes
-managerName: "Robert Dickerson &amp; Scott Davis: Serial Entrepreneurs"
+managerName: "Robert Dickerson &amp; Scott Davis"
 managerEmail: "robert@mapoutlearning.com"
 organizationName: "Stretch Goals"
 podcastSubtitle: "Stetch Goals Podcast with Robert &amp; Scott"
-squareLogo:
+squareLogo: assets/images/podcasts/sg-podcast-logo.jpg
 
 
 # Social media
@@ -56,6 +56,7 @@ exclude:
   - node_modules
   - Gulpfile.js
   - package.json
+  - aws.json
 
 #sass:
 #  sass_dir: _sass

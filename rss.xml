@@ -49,9 +49,9 @@
             <guid isPermaLink="true">{{ post.link }}</guid>
             <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/mp3"/>
             <itunes:author>{{ post.speaker }}</itunes:author>
-            <itunes:subtitle></itunes:subtitle>
+            <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
             <itunes:summary>{{ post.description }}</itunes:summary>
-            <itunes:duration>{{ post.podcastLength }}</itunes:duration>
+            <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:keywords>{{ post.keywords }}</itunes:keywords>
             <itunes:image href="{% if post.image %}{{ site.url }}/{{ post.image }}{% else %}{{ site.url }}/{{site.squareLogo}}{% endif %}" />
             <itunes:explicit>no</itunes:explicit>

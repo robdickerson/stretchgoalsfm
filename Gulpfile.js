@@ -65,9 +65,25 @@ gulp.task('jekyll', function () {
 
     const jekyll = child.spawn(jekyll_process, ['build',
         '--watch',
-        '--incremental' /*,
-        '--drafts'*/
+        '--incremental'
+        //,'--drafts';
     ]);
+
+    const jekyllLogger = function(buffer) {
+        buffer.toString()
+            .split(/\n/)
+            .forEach(function(message) { plugins.util.log('Jekyll: ' + message)});
+    };
+
+    jekyll.stdout.on('data', jekyllLogger);
+    jekyll.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('jekyll-build', function () {
+
+    var jekyll_process = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+
+    const jekyll = child.spawn(jekyll_process, ['build']);
 
     const jekyllLogger = function(buffer) {
         buffer.toString()
@@ -95,7 +111,7 @@ gulp.task('serve', function() {
 var aws = JSON.parse(fs.readFileSync('aws.json'));
 var publisher = plugins.awspublish.create(aws);
 
-gulp.task('deploy', ['styles', 'jekyll'], function () {
+gulp.task('deploy', ['styles', 'jekyll-build'], function () {
 
     var headers = { 'Cache-Control': 'max-age=3600, no-transform, public' };
 
