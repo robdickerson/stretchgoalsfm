@@ -2,7 +2,7 @@
 <html>
     <head>
         {% include head.html %}
-        <title>{{ page.title }}</title>
+        <title>{{ page.title | default: "Stretch Goals Podcast" }}</title>
 
         {% assign post = site.posts.first %}
         <style>

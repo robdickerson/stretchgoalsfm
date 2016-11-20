@@ -18,8 +18,8 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   The Stretch Goals podcast is hosted by Robert Dickerson and Scott Davis and each week we’ll share insights and lessons learned based on our experiences as Entrepreneurs. We’ll challenge you to create ambitious goals as you start and grow your business.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://stretchgoals.fm" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "https://stretchgoals.fm" # the base hostname & protocol for your site, e.g. http://example.com
+audiourl: "https://audio.stretchgoals.fm"
 
 #Feed Info/iTunes
 managerName: "Robert Dickerson &amp; Scott Davis"
@@ -41,7 +41,7 @@ scott_twitter_url: https://twitter.com/the_scott_davis
 # Subscription links
 itunes_subscribe: https://itunes
 googleplay_subscribe: https://play.google.com
-rss_subscribe: http://stretchgoals.fm/rss.xml
+rss_subscribe: http://feeds.soundcloud.com/users/soundcloud:users:267751618/sounds.rss
 
 permalink: /:title/
 

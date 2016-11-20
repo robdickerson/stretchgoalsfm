@@ -2,7 +2,7 @@
 <html>
     <head>
         {% include head.html %}
-        <title>{{ page.title }}</title>
+        <title>Stretch Goals - {{ page.title | default: "Podcast" }}</title>
 
         <style>
             .page-podcasts-detail #hero {
