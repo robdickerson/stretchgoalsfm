@@ -39,9 +39,10 @@ scott_twitter_username: The_Scott_Davis
 scott_twitter_url: https://twitter.com/the_scott_davis
 
 # Subscription links
-itunes_subscribe: https://itunes
-googleplay_subscribe: https://play.google.com
+itunes_subscribe: https://itunes.apple.com/us/podcast/stretch-goals/id1178454667
+googleplay_subscribe: https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igcwkk25hd3uvtoqqfqykrawsvm?t%3DStretch_Goals
 rss_subscribe: http://feeds.soundcloud.com/users/soundcloud:users:267751618/sounds.rss
+soundcloud_subscribe: https://soundcloud.com/stretchgoals
 
 permalink: /:title/
 
