@@ -45,6 +45,7 @@ rss_subscribe: http://feeds.soundcloud.com/users/soundcloud:users:267751618/soun
 soundcloud_subscribe: https://soundcloud.com/stretchgoals
 
 permalink: /:title/
+future: true
 
 # Build settings
 markdown: kramdown
