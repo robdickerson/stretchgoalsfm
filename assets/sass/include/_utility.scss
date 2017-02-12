@@ -452,3 +452,12 @@ ul.share-buttons {
 .align-center {
 	text-align: center;
 }
+
+@media (min-width: $screen-xs-max) {
+	.row-eq-height {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}

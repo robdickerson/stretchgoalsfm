@@ -327,6 +327,13 @@ ul.share-buttons {
 .align-center {
   text-align: center; }
 
+@media (min-width: 767px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
 a.play-button {
   cursor: pointer; }
   a.play-button em.fa {
@@ -1931,7 +1938,8 @@ div#podcasts {
     div#podcasts div.podcast-box a span.podcast-body {
       text-align: left;
       padding: 25px;
-      display: block; }
+      display: block;
+      height: 200px; }
       div#podcasts div.podcast-box a span.podcast-body h3 {
         font-size: 18px;
         font-weight: 400;
