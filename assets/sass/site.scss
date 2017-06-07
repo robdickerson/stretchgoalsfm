@@ -108,11 +108,11 @@ body {
 
 // -- Header -- //
 div#header {
-	padding: 0 15px 0 15px;
+	padding: 30px 40px 0 40px;
 	display: block;
 	width: 100%;
 	position: absolute;
-	top: 0;
+	top: 15px;
 	left: 0;
 	right: 0;
 	z-index: 999;
@@ -129,7 +129,7 @@ div#header {
 			text-indent: -9999px;
 			background: url(../images/logo-horizontal-white-red.png) no-repeat;
 			/*background-size: 500px 300px;*/
-			margin-top: 10px;
+			margin-top: 15px;
 			z-index: 99999;
 			position: relative;
 		}
@@ -1759,7 +1759,7 @@ div#podcasts {
 					height: auto;
 				}
 			}
-			
+
 			span.podcast-title {
 				background-color: #37aea4;
 				width: 100%;
