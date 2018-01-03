@@ -20,6 +20,7 @@ gem "jekyll", "3.4.3"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+   gem  'jekyll-paginate-v2'
    gem "jekyll-feed", "~> 0.8"
    gem "jekyll-sitemap", "~> 1.0"
 end

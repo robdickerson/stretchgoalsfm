@@ -50,6 +50,7 @@ future: true
 # Build settings
 markdown: kramdown
 gems:
+  - jekyll-paginate-v2
 #  - jekyll-feed
 
 exclude:
@@ -59,6 +60,20 @@ exclude:
   - Gulpfile.js
   - package.json
   - aws.json
+
+# Explicitly turn off the old code
+paginate: nil
+paginate_path: nil
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 #sass:
 #  sass_dir: _sass

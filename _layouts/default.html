@@ -4,14 +4,14 @@
         {% include head.html %}
         <title>{{ page.title | default: "Stretch Goals Podcast" }}</title>
 
-        {% assign post = site.posts.first %}
+        {% assign post = paginator.posts.first %}
         <style>
             .page-podcasts #hero {
                 background-image:
                     linear-gradient(
                             rgba(0,0,0,.45),
                             rgba(0,0,0,.45)),
-                    url(../assets/images/podcasts/{{post.image}});
+                    url(/assets/images/podcasts/{{post.image}});
             }
         </style>
 
@@ -38,7 +38,7 @@
 
         <div id="podcasts" class="container">
 
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
 
             {% if thecycle == '1'%}
@@ -67,6 +67,24 @@
             </div>
             {% endif %}
             {% endfor %}
+
+            <!--
+             Showing buttons to move to the next and to the previous list of posts (pager buttons).
+           -->
+            {% if paginator.total_pages > 1 %}
+            <ul class="pager">
+                {% if paginator.previous_page %}
+                <li class="previous">
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+                </li>
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="next">
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endif %}
 
         </div><!--/ #podcasts -->
 
